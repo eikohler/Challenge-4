@@ -1,12 +1,15 @@
 const quiz = document.getElementsByClassName("quiz-section");
 const quizSubmit = document.getElementsByClassName("quiz-submit");
-var score = 0;
+var timeLimit = 75;
+var countdown;
 
 
 function startQuiz(){
     var num = 0;
     document.getElementById("start").style.display = "none";
     quiz[num].style.display = "block";
+    updateTime();
+    countdown = setInterval(timer, 1000);
     quizSubmit[num].addEventListener("click", function(event){
         event.preventDefault();
         nextQuiz(num);
@@ -20,11 +23,15 @@ function nextQuiz(num){
         quiz[num].style.display = "none";
         if(isTrue){
             displayResult.innerHTML = "Correct";
-            score++;
-        }else displayResult.innerHTML = "Incorrect";
+        }else{
+            displayResult.innerHTML = "Incorrect";
+            timeLimit = timeLimit - 10;
+            updateTime();
+        }
 
         if(num+1>=quiz.length){
-            displayResult.innerHTML = "Final Score: "+score;
+            stopTime();
+            displayResult.innerHTML = "Final Score: "+timeLimit;
         }else{
             quiz[num+1].style.display = "block";
             quizSubmit[num+1].addEventListener("click", function(event){
@@ -45,4 +52,17 @@ function validateSubmission(num){
     }
 
     return false;
+}
+
+function timer(){
+    timeLimit--
+    document.getElementById("timeLeft").innerHTML = timeLimit;
+}
+
+function updateTime(){
+    document.getElementById("timeLeft").innerHTML = timeLimit;
+}
+
+function stopTime(){
+    clearInterval(countdown);
 }

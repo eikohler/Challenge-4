@@ -9,49 +9,54 @@
 </head>
 <body>
     <script src="/assets/js/script.js"></script>
-    <section id="start">
-        <h1>Quiz Game</h1>
-        <button onclick="startQuiz()">Start</button>
-    </section>
-    <section class="quiz-section">
-        <h2>Question 1</h2>
-        <form>
-            <input type="radio" name="selection-0" id="true-0" value="HTML">
-            <label for="html">HTML</label><br>
-            <input type="radio" name="selection-0" value="CSS">
-            <label for="css">CSS</label><br>
-            <input type="radio" name="selection-0" value="JavaScript">
-            <label for="javascript">JavaScript</label><br><br>
-            <input type="submit" value="Submit" class="quiz-submit">
-        </form>
-    </section>
-    <section class="quiz-section">
-        <h2>Question 2</h2>
-        <form>
-            <input type="radio" name="selection-1" value="HTML">
-            <label for="html">HTML</label><br>
-            <input type="radio" id="true-1" name="selection-1" value="CSS">
-            <label for="css">CSS</label><br>
-            <input type="radio" name="selection-1" value="JavaScript">
-            <label for="javascript">JavaScript</label><br><br>
-            <input type="submit" value="Submit" class="quiz-submit">
-        </form>
-    </section>
-    <section class="quiz-section">
-        <h2>Question 3</h2>
-        <form>
-            <input type="radio" name="selection-2" value="HTML">
-            <label for="html">HTML</label><br>
-            <input type="radio" name="selection-2" value="CSS">
-            <label for="css">CSS</label><br>
-            <input type="radio" id="true-2" name="selection-2" value="JavaScript">
-            <label for="javascript">JavaScript</label><br><br>
-            <input type="submit" value="Submit" class="quiz-submit">
-        </form>
-    </section>
-
-
-    <h4 id="result"></h4>
-
+    <p>Time Left: <span id="timeLeft"></span></p>
+    <main>
+        <div class="quiz-container">
+            <section id="start">
+                <h1>Quiz Game</h1>
+                <button onclick="startQuiz()">Start</button>
+            </section>
+            <section class="quiz-section">
+                <h2>Question 1</h2>
+                <form>
+                    <input type="radio" name="selection-0" id="true-0" value="HTML">
+                    <label for="html">HTML</label><br>
+                    <input type="radio" name="selection-0" value="CSS">
+                    <label for="css">CSS</label><br>
+                    <input type="radio" name="selection-0" value="JavaScript">
+                <label for="javascript">JavaScript</label><br><br>
+                <input type="submit" value="Submit" class="quiz-submit">
+            </form>
+        </section>
+        <section class="quiz-section">
+            <h2>Question 2</h2>
+            <form>
+                <input type="radio" name="selection-1" value="HTML">
+                <label for="html">HTML</label><br>
+                <input type="radio" id="true-1" name="selection-1" value="CSS">
+                <label for="css">CSS</label><br>
+                <input type="radio" name="selection-1" value="JavaScript">
+                <label for="javascript">JavaScript</label><br><br>
+                <input type="submit" value="Submit" class="quiz-submit">
+            </form>
+        </section>
+        <section class="quiz-section">
+            <h2>Question 3</h2>
+            <form>
+                <input type="radio" name="selection-2" value="HTML">
+                <label for="html">HTML</label><br>
+                <input type="radio" name="selection-2" value="CSS">
+                <label for="css">CSS</label><br>
+                <input type="radio" id="true-2" name="selection-2" value="JavaScript">
+                <label for="javascript">JavaScript</label><br><br>
+                <input type="submit" value="Submit" class="quiz-submit">
+            </form>
+        </section>
+        
+        <h4 id="result"></h4>
+    </div>
+        
+    </main>
+    
 </body>
 </html>
