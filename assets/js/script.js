@@ -116,6 +116,7 @@ submitScore.addEventListener("click", function(event){
 
         window.localStorage.setItem('player'+Math.floor(Math.random() * 10000), JSON.stringify(player));
         console.log(getSavedScores());
+        updateHS();
         reset();
     }
 });
@@ -144,6 +145,7 @@ function viewHighScores(){
     quizContainer.style.display = "none";
     hsContainer.style.display = "block";
     document.getElementById("highscores").style.display = "none";
+    document.getElementById("clearHS").style.display = "block";
     document.getElementById("quiz-game").style.display = "block";
 }
 
@@ -151,5 +153,16 @@ function returnToGame(){
     quizContainer.style.display = "block";
     hsContainer.style.display = "none";
     document.getElementById("highscores").style.display = "block";
+    document.getElementById("clearHS").style.display = "none";
     document.getElementById("quiz-game").style.display = "none";
+}
+
+function updateHS(){
+    hsList.innerHTML = '';
+    buildHighScoresList();
+}
+
+function clearHS(){
+    localStorage.clear();
+    updateHS();
 }

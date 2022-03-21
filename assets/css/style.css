@@ -1,4 +1,4 @@
-.quiz-section, #finalScore, #high-score-container, #quiz-game{
+.quiz-section, #finalScore, #high-score-container, #quiz-game, #clearHS{
     display: none;
 }
 
@@ -31,4 +31,8 @@ body{
 #high-scores-list{
     list-style: none;
     padding: 0px;
+}
+
+#clearHS{
+    margin-bottom: 10px;
 }
