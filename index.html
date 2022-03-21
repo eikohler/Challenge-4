@@ -4,9 +4,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Quiz</title>
 </head>
 <body>
-    
+    <script src="/assets/js/script.js"></script>
+    <section id="start">
+        <h1>Quiz Game</h1>
+        <button onclick="startQuiz()">Start</button>
+    </section>
+    <section class="quiz-section">
+        <h2>Question 1</h2>
+        <form>
+            <input type="radio" id="html" name="true-0" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="false-0" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="false-0" value="JavaScript">
+            <label for="javascript">JavaScript</label><br><br>
+            <input type="submit" value="Submit" class="quiz-submit">
+        </form>
+    </section>
+    <section class="quiz-section">
+        <h2>Question 2</h2>
+        <form>
+            <input type="radio" id="html" name="false-1" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="true-1" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="false-1" value="JavaScript">
+            <label for="javascript">JavaScript</label><br><br>
+            <input type="submit" value="Submit" class="quiz-submit">
+        </form>
+    </section>
+    <section class="quiz-section">
+        <h2>Question 3</h2>
+        <form>
+            <input type="radio" id="html" name="fav_language" value="HTML">
+            <label for="html">HTML</label><br>
+            <input type="radio" id="css" name="fav_language" value="CSS">
+            <label for="css">CSS</label><br>
+            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+            <label for="javascript">JavaScript</label><br><br>
+            <input type="submit" value="Submit" class="quiz-submit">
+        </form>
+    </section>
+
+
 </body>
 </html>
