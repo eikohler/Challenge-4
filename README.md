@@ -1,4 +1,4 @@
-# Challenge-4
+# Web Dev Quiz
 Created a quiz using html, css and javascript.
 Has the basic quiz functionality.
 Three web development related questions.
